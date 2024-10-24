@@ -24,6 +24,10 @@
     --button-secondary-hover: #1a1a1a;
   }
 }
+.evidenceCheckbox {
+  background-color: green;
+}
+
 .main {
   display: flex;
   flex-direction: column;
