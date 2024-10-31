@@ -1,4 +1,7 @@
+import styles from "./ghost.module.css";
+
 export default function Ghost({ ghost, evidences }) {
+  let className = styles.ghostCard;
   let evidence = [];
   for (let i = 0; i < ghost.evidence.length; i++) {
     evidence.push(
@@ -15,6 +18,13 @@ export default function Ghost({ ghost, evidences }) {
       </li>
     );
   }
+  for (let eName in evidences) {
+    if (!ghost.evidence.includes(eName)) {
+      if (evidences[eName]) {
+        className = styles.hidden;
+      }
+    }
+  }
   let weaknesses = [];
   for (let i = 0; i < ghost.weaknesses.length; i++) {
     weaknesses.push(
@@ -24,11 +34,14 @@ export default function Ghost({ ghost, evidences }) {
     );
   }
   return (
-    <li className="ghostCard">
-      <div className="ghostName">{ghost.name}</div>
-      <ul className="evidences">{evidence}</ul>
-      <ul className="strengths">{strengths}</ul>
-      <ul className="weaknesses">{weaknesses}</ul>
+    <li className={className}>
+      <div className={styles.ghostName}>{ghost.name}</div>
+      <p>Evidences</p>
+      <ul className={styles.evidences}>{evidence}</ul>
+      <p>Strengths</p>
+      <ul className={styles.strengths}>{strengths}</ul>
+      <p>Weaknesses</p>
+      <ul className={styles.weaknesses}>{weaknesses}</ul>
     </li>
   );
 }

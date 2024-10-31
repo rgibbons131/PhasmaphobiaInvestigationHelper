@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./evidenceCheckbox.module.css";
 
 export default function EvidenceCheckbox({ name, valueIn = name, val, func }) {
   return (

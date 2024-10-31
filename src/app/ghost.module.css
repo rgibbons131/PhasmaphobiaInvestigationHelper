@@ -1,0 +1,35 @@
+.ghostCard {
+  font-size: 1.4em;
+  list-style: none;
+  list-style-position: inside;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  max-width: 300px;
+  border: 2px white solid;
+  border-radius: 5px;
+}
+
+.ghostCard li {
+  margin: 15px 0;
+}
+
+/* .evidences li::marker {
+} */
+
+.strengths li::marker {
+  content: "\2022    ";
+}
+
+.weaknesses li::marker {
+  content: "\2022    ";
+}
+
+.ghostName {
+  font-size: 1.6em;
+}
+
+.hidden {
+  display: none;
+}

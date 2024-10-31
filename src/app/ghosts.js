@@ -4,19 +4,19 @@ export default function ghosts() {
   return [
     {
       name: "Banshee",
-      evidence: ["UV", "gorbs", "Dots"],
+      evidence: ["UV", "gorbs", "dots"],
       strengths: ["Will target only one player at a time."],
       weaknesses: ["Has a distinctive wail on the Parabolic Microphone."],
     },
     {
       name: "Demon",
-      evidence: ["UV", "GhostWriting", "freeze"],
+      evidence: ["UV", "ghostWriting", "freeze"],
       strengths: ["Can initiate hunts more often."],
       weaknesses: ["Crucifix effectiveness is increased to 5m against one."],
     },
     {
       name: "Deogen",
-      evidence: ["SpiritBox", "GhostWriting", "Dots"],
+      evidence: ["spiritBox", "ghostWriting", "dots"],
       strengths: [
         "Always knows where the player is during a hunt and moves very fast when going to their location.",
       ],
@@ -24,7 +24,7 @@ export default function ghosts() {
     },
     {
       name: "Goryo",
-      evidence: ["EMF5", "UV", "Dots"],
+      evidence: ["EMF5", "UV", "dots"],
       strengths: [
         "Can only be seen interacting with D.O.T.S. through a camera when nobody is nearby.",
       ],
@@ -44,7 +44,7 @@ export default function ghosts() {
     },
     {
       name: "Mare",
-      evidence: ["SpiritBox", "gorbs", "GhostWriting"],
+      evidence: ["spiritBox", "gorbs", "ghostWriting"],
       strengths: ["Has an increased chance to attack in the dark."],
       weaknesses: [
         "Turning the lights on will reduce the chance of an attack.",
@@ -52,7 +52,7 @@ export default function ghosts() {
     },
     {
       name: "Moroi",
-      evidence: ["SpiritBox", "GhostWriting", "freeze"],
+      evidence: ["spiritBox", "ghostWriting", "freeze"],
       strengths: [
         "Moves noticeably faster at low player sanity and can make players lose sanity quicker than usual while investigating.",
       ],
@@ -60,13 +60,13 @@ export default function ghosts() {
     },
     {
       name: "The Mimic",
-      evidence: ["SpiritBox", "UV", "gorbs", "freeze"],
+      evidence: ["spiritBox", "UV", "gorbs", "freeze"],
       strengths: ["Can mimic the abilities and traits of other ghosts."],
       weaknesses: ["Will present Ghost Orbs as a secondary "],
     },
     {
       name: "Myling",
-      evidence: ["EMF5", "UV", "GhostWriting"],
+      evidence: ["EMF5", "UV", "ghostWriting"],
       strengths: ["Has quieter footsteps during a hunt."],
       weaknesses: ["Produces paranormal sounds more frequently."],
     },
@@ -78,13 +78,13 @@ export default function ghosts() {
     },
     {
       name: "Oni",
-      evidence: ["EMF5", "freeze", "Dots"],
+      evidence: ["EMF5", "freeze", "dots"],
       strengths: ["Increased activity and ghost events."],
       weaknesses: ["An Oni's increased activity makes them easier to find."],
     },
     {
       name: "Onryo",
-      evidence: ["SpiritBox", "gorbs", "freeze"],
+      evidence: ["spiritBox", "gorbs", "freeze"],
       strengths: ["A flame extinguishing can cause an Onryo to attack."],
       weaknesses: [
         "The presence of flames reduces the Onryo's ability to attack.",
@@ -92,7 +92,7 @@ export default function ghosts() {
     },
     {
       name: "Phantom",
-      evidence: ["SpiritBox", "UV", "Dots"],
+      evidence: ["spiritBox", "UV", "dots"],
       strengths: [
         "Looking at a Phantom will lower the player's sanity considerably.",
       ],
@@ -102,13 +102,13 @@ export default function ghosts() {
     },
     {
       name: "Poltergeist",
-      evidence: ["SpiritBox", "UV", "GhostWriting"],
+      evidence: ["spiritBox", "UV", "ghostWriting"],
       strengths: ["Capable of throwing multiple objects at once."],
       weaknesses: ["Becomes powerless with no throwables nearby."],
     },
     {
       name: "Raiju",
-      evidence: ["EMF5", "gorbs", "Dots"],
+      evidence: ["EMF5", "gorbs", "dots"],
       strengths: ["Moves faster near electrical devices."],
       weaknesses: [
         "Disrupts electronic equipment from further away when it hunts.",
@@ -116,7 +116,7 @@ export default function ghosts() {
     },
     {
       name: "Revenant",
-      evidence: ["gorbs", "GhostWriting", "freeze"],
+      evidence: ["gorbs", "ghostWriting", "freeze"],
       strengths: [
         "Can travel significantly faster if a player is spotted during a hunt.",
       ],
@@ -124,13 +124,13 @@ export default function ghosts() {
     },
     {
       name: "Shade",
-      evidence: ["EMF5", "GhostWriting", "freeze"],
+      evidence: ["EMF5", "ghostWriting", "freeze"],
       strengths: ["Being shy makes it more difficult to locate and obtain "],
       weaknesses: ["Less likely to hunt if multiple people are nearby."],
     },
     {
       name: "Spirit",
-      evidence: ["EMF5", "SpiritBox", "GhostWriting"],
+      evidence: ["EMF5", "spiritBox", "ghostWriting"],
       strengths: ["None."],
       weaknesses: [
         "Smudge sticks are more effective, preventing a hunt for longer.",
@@ -138,7 +138,7 @@ export default function ghosts() {
     },
     {
       name: "The Twins",
-      evidence: ["EMF5", "SpiritBox", "freeze"],
+      evidence: ["EMF5", "spiritBox", "freeze"],
       strengths: ["Either Twin may start a hunt, though not at the same time."],
       weaknesses: [
         "Will often interact with the environment at the same time.",
@@ -146,13 +146,13 @@ export default function ghosts() {
     },
     {
       name: "Wraith",
-      evidence: ["EMF5", "SpiritBox", "Dots"],
+      evidence: ["EMF5", "spiritBox", "dots"],
       strengths: ["Does not leave UV footprints after stepping in salt."],
       weaknesses: ["Will become more active if it steps in salt."],
     },
     {
       name: "Yokai",
-      evidence: ["SpiritBox", "gorbs", "Dots"],
+      evidence: ["spiritBox", "gorbs", "dots"],
       strengths: [
         "Talking near the Yokai will anger it, increasing the chance to attack.",
       ],
@@ -160,7 +160,7 @@ export default function ghosts() {
     },
     {
       name: "Yurei",
-      evidence: ["gorbs", "freeze", "Dots"],
+      evidence: ["gorbs", "freeze", "dots"],
       strengths: ["Has a stronger effect on sanity."],
       weaknesses: [
         "Smudging the Yurei's ghost room will reduce how often it wanders.",
@@ -168,7 +168,7 @@ export default function ghosts() {
     },
     {
       name: "Thaye",
-      evidence: ["gorbs", "GhostWriting", "Dots"],
+      evidence: ["gorbs", "ghostWriting", "dots"],
 
       strengths: [
         "Entering the location makes it active, defensive and agile.",

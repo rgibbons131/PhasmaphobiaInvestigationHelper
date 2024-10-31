@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <ol>
+        <ol className={styles.evidenceList}>
           <TriStateCheckbox
             name="EMF Level 5"
             valueIn="EMF5"
@@ -95,9 +95,8 @@ export default function Home() {
             }}
           />
         </ol>
-        <ul className="ghostList">{ghostList}</ul>
+        <ul className={styles.ghostList}>{ghostList}</ul>
       </main>
-      <footer className={styles.footer}></footer>
     </div>
   );
 }
