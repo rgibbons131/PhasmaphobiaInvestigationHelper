@@ -20,7 +20,7 @@ export default function Ghost({ ghost, evidences }) {
   }
   for (let eName in evidences) {
     if (!ghost.evidence.includes(eName)) {
-      if (evidences[eName]) {
+      if (evidences[eName].bool) {
         className = styles.hidden;
       }
     }
