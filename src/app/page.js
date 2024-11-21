@@ -4,7 +4,7 @@ import TriStateCheckbox from "./EvidenceCheckbox";
 import ghosts from "./ghosts.js";
 import Ghost from "./Ghost.js";
 import React from "react";
-import Maps from "./maps";
+import Maps from "./Maps.js";
 import { useState } from "react";
 import EvidencePage from "./Evidencepage";
 
