@@ -1,0 +1,171 @@
+//import styles from "./evidenceCheckbox.module.css";
+import { useState } from "react";
+import Image from "next/image";
+import styles from "./maps.module.css";
+import tanglewood from "./images/Tanglewood.webp";
+
+export default function Maps() {
+  const [map, setMap] = useState("none");
+  return (
+    <section className={""}>
+      <ul>
+        <li
+          onClick={() => {
+            setMap("tanglewood");
+          }}
+        >
+          6 TangleWood
+        </li>
+        <li
+          onClick={() => {
+            setMap("ridgeview");
+          }}
+        >
+          10 Ridgeview
+        </li>
+        <li
+          onClick={() => {
+            setMap("willow");
+          }}
+        >
+          13 Willow Street
+        </li>
+        <li
+          onClick={() => {
+            setMap("edgefield");
+          }}
+        >
+          42 Edgefield
+        </li>
+        <li
+          onClick={() => {
+            setMap("bleasdale");
+          }}
+        >
+          Bleasdale Farmhouse
+        </li>
+        <li
+          onClick={() => {
+            setMap("highschool");
+          }}
+        >
+          Brownstone Highschool
+        </li>
+        <li
+          onClick={() => {
+            setMap("grafton");
+          }}
+        >
+          Grafton Farmhouse
+        </li>
+        <li
+          onClick={() => {
+            setMap("maple");
+          }}
+        >
+          Maple Lodge Campwood
+        </li>
+        <li
+          onClick={() => {
+            setMap("lighthouse");
+          }}
+        >
+          Point Hope
+        </li>
+        <li
+          onClick={() => {
+            setMap("prison");
+          }}
+        >
+          Prison
+        </li>
+        <li
+          onClick={() => {
+            setMap("sunnyMeadows");
+          }}
+        >
+          Sunny Meadows
+        </li>
+        <li
+          onClick={() => {
+            setMap("woodwind");
+          }}
+        >
+          Camp Woodwind
+        </li>
+      </ul>
+      <Image
+        width={1208}
+        height={800}
+        className={map == "tanglewood" ? "" : styles.hidden}
+        src={require("./images/Tanglewood.webp")}
+      />
+      <Image
+        width={1206}
+        height={1395}
+        className={map == "ridgeview" ? "" : styles.hidden}
+        src={require("./images/10_Ridgeview_Court_-_Floorplan.webp")}
+      />
+      <Image
+        width={1277}
+        height={859}
+        className={map == "willow" ? "" : styles.hidden}
+        src={require("./images/13_Willow_Street_-_Floorplan.webp")}
+      />
+      <Image
+        width={1382}
+        height={1342}
+        className={map == "bleasdale" ? "" : styles.hidden}
+        src={require("./images/Bleasdale_Farmhouse_-_Floorplan.webp")}
+      />
+      <Image
+        width={2656}
+        height={3344}
+        className={map == "highschool" ? "" : styles.hidden}
+        src={require("./images/Brownstone_High_School_-_Floorplan.webp")}
+      />
+      <Image
+        width={1662}
+        height={874}
+        className={map == "grafton" ? "" : styles.hidden}
+        src={require("./images/Grafton_Farmhouse_-_Floorplan.webp")}
+      />
+      <Image
+        width={1879}
+        height={1430}
+        className={map == "maple" ? "" : styles.hidden}
+        src={require("./images/Maple_Lodge_Campsite_-_Floorplan.webp")}
+      />
+      <Image
+        width={1832}
+        height={1899}
+        className={map == "lighthouse" ? "" : styles.hidden}
+        src={require("./images/Point_Hope_-_Floorplan.webp")}
+      />
+      <Image
+        width={3720}
+        height={2556}
+        className={map == "sunnyMeadows" ? "" : styles.hidden}
+        src={require("./images/Sunny_Meadows_Mental_Institution_-_Full_Map_Floorplan.webp")}
+      />
+      <Image
+        width={1082}
+        height={806}
+        className={map == "woodwind" ? "" : styles.hidden}
+        src={require("./images/Woodwind_-_Floorplan.webp")}
+      />
+      <Image
+        width={3994}
+        height={2039}
+        className={map == "prison" ? "" : styles.hidden}
+        src={require("./images/Prison_-_Floorplan.webp")}
+      />
+      <Image
+        width={1167}
+        height={1391}
+        className={map == "edgefield" ? "" : styles.hidden}
+        src={require("./images/42_Edgefield_Road_-_Floorplan.webp")}
+      />
+    </section>
+  );
+}
