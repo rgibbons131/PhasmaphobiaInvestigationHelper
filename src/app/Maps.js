@@ -1,13 +1,16 @@
 //import styles from "./evidenceCheckbox.module.css";
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./maps.module.css";
 import tanglewood from "./images/Tanglewood.webp";
 
-export default function Maps() {
+export default function Maps({ display }) {
+  console.log("maps");
+  console.log(display);
   const [map, setMap] = useState("none");
   return (
-    <section className={""}>
+    <section className={display ? styles.image : styles.hidden}>
       <ul>
         <li
           onClick={() => {
@@ -97,73 +100,73 @@ export default function Maps() {
       <Image
         width={1208}
         height={800}
-        className={map == "tanglewood" ? "" : styles.hidden}
+        className={map == "tanglewood" ? styles.image : styles.hidden}
         src={require("./images/Tanglewood.webp")}
       />
       <Image
         width={1206}
         height={1395}
-        className={map == "ridgeview" ? "" : styles.hidden}
+        className={map == "ridgeview" ? styles.image : styles.hidden}
         src={require("./images/10_Ridgeview_Court_-_Floorplan.webp")}
       />
       <Image
         width={1277}
         height={859}
-        className={map == "willow" ? "" : styles.hidden}
+        className={map == "willow" ? styles.image : styles.hidden}
         src={require("./images/13_Willow_Street_-_Floorplan.webp")}
       />
       <Image
         width={1382}
         height={1342}
-        className={map == "bleasdale" ? "" : styles.hidden}
+        className={map == "bleasdale" ? styles.image : styles.hidden}
         src={require("./images/Bleasdale_Farmhouse_-_Floorplan.webp")}
       />
       <Image
         width={2656}
         height={3344}
-        className={map == "highschool" ? "" : styles.hidden}
+        className={map == "highschool" ? styles.image : styles.hidden}
         src={require("./images/Brownstone_High_School_-_Floorplan.webp")}
       />
       <Image
         width={1662}
         height={874}
-        className={map == "grafton" ? "" : styles.hidden}
+        className={map == "grafton" ? styles.image : styles.hidden}
         src={require("./images/Grafton_Farmhouse_-_Floorplan.webp")}
       />
       <Image
         width={1879}
         height={1430}
-        className={map == "maple" ? "" : styles.hidden}
+        className={map == "maple" ? styles.image : styles.hidden}
         src={require("./images/Maple_Lodge_Campsite_-_Floorplan.webp")}
       />
       <Image
         width={1832}
         height={1899}
-        className={map == "lighthouse" ? "" : styles.hidden}
+        className={map == "lighthouse" ? styles.image : styles.hidden}
         src={require("./images/Point_Hope_-_Floorplan.webp")}
       />
       <Image
         width={3720}
         height={2556}
-        className={map == "sunnyMeadows" ? "" : styles.hidden}
+        className={map == "sunnyMeadows" ? styles.image : styles.hidden}
         src={require("./images/Sunny_Meadows_Mental_Institution_-_Full_Map_Floorplan.webp")}
       />
       <Image
         width={1082}
         height={806}
-        className={map == "woodwind" ? "" : styles.hidden}
+        className={map == "woodwind" ? styles.image : styles.hidden}
         src={require("./images/Woodwind_-_Floorplan.webp")}
       />
       <Image
         width={3994}
         height={2039}
-        className={map == "prison" ? "" : styles.hidden}
+        className={map == "prison" ? styles.image : styles.hidden}
         src={require("./images/Prison_-_Floorplan.webp")}
       />
       <Image
         width={1167}
         height={1391}
-        className={map == "edgefield" ? "" : styles.hidden}
+        className={map == "edgefield" ? styles.image : styles.hidden}
         src={require("./images/42_Edgefield_Road_-_Floorplan.webp")}
       />
     </section>

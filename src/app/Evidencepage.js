@@ -1,3 +1,4 @@
+"use client";
 import styles from "./page.module.css";
 import TriStateCheckbox from "./EvidenceCheckbox";
 import ghosts from "./ghosts.js";
@@ -28,8 +29,6 @@ function suggestedEvidence(evidences, ghostList, lastEvidence) {
   }
   var max = { name: "", value: 0 };
   for (let e in evidences) {
-    console.log(e);
-    console.log(evidences[e]);
     if (
       (evidences[e].value > max.value &&
         !evidences[e].bool &&
@@ -38,14 +37,12 @@ function suggestedEvidence(evidences, ghostList, lastEvidence) {
     ) {
       max.name = e;
       max.value = evidences[e].value;
-      console.log(e);
-      console.log(evidences[e].value);
     }
   }
   return max.name;
 }
 
-export default function EvidencePage() {
+export default function EvidencePage({ display }) {
   // Create evidence state variables
   const [EMF5, setEMF5] = useState(false);
   const [UV, setUV] = useState(false);
@@ -55,6 +52,9 @@ export default function EvidencePage() {
   const [dots, setDots] = useState(false);
   const [gorbs, setGorbs] = useState(false);
   const [suggested, setSuggested] = useState("gorbs");
+
+  console.log("Evidence Tab");
+  console.log("display");
 
   const evidences = {
     EMF5: { bool: EMF5, value: 0 },
@@ -75,7 +75,7 @@ export default function EvidencePage() {
   }
 
   return (
-    <div className={styles.page}>
+    <div className={display ? styles.page : styles.hidden}>
       <main className={styles.main}>
         <ol className={styles.evidenceList}>
           <TriStateCheckbox
