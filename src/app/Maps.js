@@ -10,8 +10,8 @@ export default function Maps({ display }) {
   console.log(display);
   const [map, setMap] = useState("none");
   return (
-    <section className={display ? styles.image : styles.hidden}>
-      <ul>
+    <section className={display ? styles.maps : styles.hidden}>
+      <ul classname={styles.selector}>
         <li
           onClick={() => {
             setMap("tanglewood");
@@ -124,7 +124,7 @@ export default function Maps({ display }) {
       <Image
         width={2656}
         height={3344}
-        className={map == "highschool" ? styles.image : styles.hidden}
+        className={map == "highschool" ? styles.bigImage : styles.hidden}
         src={require("./images/Brownstone_High_School_-_Floorplan.webp")}
       />
       <Image
@@ -142,13 +142,13 @@ export default function Maps({ display }) {
       <Image
         width={1832}
         height={1899}
-        className={map == "lighthouse" ? styles.image : styles.hidden}
+        className={map == "lighthouse" ? styles.bigImage : styles.hidden}
         src={require("./images/Point_Hope_-_Floorplan.webp")}
       />
       <Image
         width={3720}
         height={2556}
-        className={map == "sunnyMeadows" ? styles.image : styles.hidden}
+        className={map == "sunnyMeadows" ? styles.bigImage : styles.hidden}
         src={require("./images/Sunny_Meadows_Mental_Institution_-_Full_Map_Floorplan.webp")}
       />
       <Image
@@ -160,7 +160,7 @@ export default function Maps({ display }) {
       <Image
         width={3994}
         height={2039}
-        className={map == "prison" ? styles.image : styles.hidden}
+        className={map == "prison" ? styles.bigImage : styles.hidden}
         src={require("./images/Prison_-_Floorplan.webp")}
       />
       <Image

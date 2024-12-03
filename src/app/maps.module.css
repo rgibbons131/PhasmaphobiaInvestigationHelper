@@ -2,8 +2,22 @@
   display: none;
 }
 
+.maps {
+  display: flex;
+  flex-direction: row;
+}
+
+.selector {
+}
+
 .image {
   max-width: 100%;
-  height: fit-content;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.bigImage {
+  max-width: 100%;
+  max-height: fit-content;
   object-fit: contain;
 }
