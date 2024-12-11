@@ -75,81 +75,79 @@ export default function EvidencePage({ display }) {
   }
 
   return (
-    <div className={display ? styles.page : styles.hidden}>
-      <main className={styles.main}>
-        <ol className={styles.evidenceList}>
-          <TriStateCheckbox
-            name="EMF Level 5"
-            valueIn="EMF5"
-            func={() => {
-              setEMF5(!EMF5);
-              setSuggested(suggestedEvidence(evidences, gs, "EMF5"));
-            }}
-            val={EMF5}
-            suggested={suggested}
-          />
-          <TriStateCheckbox
-            name="Ultraviolet"
-            valueIn="UV"
-            func={() => {
-              setUV(!UV);
-              setSuggested(suggestedEvidence(evidences, gs, "UV"));
-            }}
-            val={UV}
-            suggested={suggested}
-          />
-          <TriStateCheckbox
-            name="Spirit Box"
-            valueIn="SpiritBox"
-            val={spiritBox}
-            func={() => {
-              setSpiritBox(!spiritBox);
-              setSuggested(suggestedEvidence(evidences, gs, "SpiritBox"));
-            }}
-            suggested={suggested}
-          />
-          <TriStateCheckbox
-            name="Ghost Writing"
-            valueIn="GhostWriting"
-            val={ghostWriting}
-            func={() => {
-              setGhostWriting(!ghostWriting);
-              setSuggested(suggestedEvidence(evidences, gs, "GhostWriting"));
-            }}
-            suggested={suggested}
-          />
-          <TriStateCheckbox
-            name="Freezing Temperatures ( 1 &deg;C or less )"
-            valueIn="freeze"
-            val={freeze}
-            func={() => {
-              setFreeze(!freeze);
-              setSuggested(suggestedEvidence(evidences, gs, "freeze"));
-            }}
-            suggested={suggested}
-          />
-          <TriStateCheckbox
-            name="Dots"
-            val={dots}
-            func={() => {
-              setDots(!dots);
-              setSuggested(suggestedEvidence(evidences, gs, "Dots"));
-            }}
-            suggested={suggested}
-          />
-          <TriStateCheckbox
-            name="Ghost Orbs"
-            valueIn="gorbs"
-            val={gorbs}
-            func={() => {
-              setGorbs(!gorbs);
-              setSuggested(suggestedEvidence(evidences, gs, "gorbs"));
-            }}
-            suggested={suggested}
-          />
-        </ol>
-        <ul className={styles.ghostList}>{ghostList}</ul>
-      </main>
+    <div className={display ? styles.contents : styles.hidden}>
+      <ol className={styles.evidenceList}>
+        <TriStateCheckbox
+          name="EMF Level 5"
+          valueIn="EMF5"
+          func={() => {
+            setEMF5(!EMF5);
+            setSuggested(suggestedEvidence(evidences, gs, "EMF5"));
+          }}
+          val={EMF5}
+          suggested={suggested}
+        />
+        <TriStateCheckbox
+          name="Ultraviolet"
+          valueIn="UV"
+          func={() => {
+            setUV(!UV);
+            setSuggested(suggestedEvidence(evidences, gs, "UV"));
+          }}
+          val={UV}
+          suggested={suggested}
+        />
+        <TriStateCheckbox
+          name="Spirit Box"
+          valueIn="SpiritBox"
+          val={spiritBox}
+          func={() => {
+            setSpiritBox(!spiritBox);
+            setSuggested(suggestedEvidence(evidences, gs, "SpiritBox"));
+          }}
+          suggested={suggested}
+        />
+        <TriStateCheckbox
+          name="Ghost Writing"
+          valueIn="GhostWriting"
+          val={ghostWriting}
+          func={() => {
+            setGhostWriting(!ghostWriting);
+            setSuggested(suggestedEvidence(evidences, gs, "GhostWriting"));
+          }}
+          suggested={suggested}
+        />
+        <TriStateCheckbox
+          name="Freezing Temperatures ( 1 &deg;C or less )"
+          valueIn="freeze"
+          val={freeze}
+          func={() => {
+            setFreeze(!freeze);
+            setSuggested(suggestedEvidence(evidences, gs, "freeze"));
+          }}
+          suggested={suggested}
+        />
+        <TriStateCheckbox
+          name="Dots"
+          val={dots}
+          func={() => {
+            setDots(!dots);
+            setSuggested(suggestedEvidence(evidences, gs, "Dots"));
+          }}
+          suggested={suggested}
+        />
+        <TriStateCheckbox
+          name="Ghost Orbs"
+          valueIn="gorbs"
+          val={gorbs}
+          func={() => {
+            setGorbs(!gorbs);
+            setSuggested(suggestedEvidence(evidences, gs, "gorbs"));
+          }}
+          suggested={suggested}
+        />
+      </ol>
+      <ul className={styles.ghostList}>{ghostList}</ul>
     </div>
   );
 }

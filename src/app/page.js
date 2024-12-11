@@ -14,7 +14,7 @@ export default function Home() {
   const [EvidenceTab, setEvidenceTab] = useState(true);
 
   return (
-    <div className={styles.page}>
+    <div className={EvidenceTab ? styles.page : styles.page_map}>
       <div className={styles.selectorContainer}>
         <h2
           className={styles.selector}
@@ -23,7 +23,7 @@ export default function Home() {
             console.log(EvidenceTab);
           }}
         >
-          Evidence Page
+          {EvidenceTab ? "\u2611" : "\u2610"} Evidence Page
         </h2>
         <h2
           className={styles.selector}
@@ -31,7 +31,7 @@ export default function Home() {
             setEvidenceTab(false);
           }}
         >
-          Maps Page
+          {!EvidenceTab ? "\u2611" : "\u2610"} Maps Page
         </h2>
       </div>
       <DisplayPage EvidenceTab={EvidenceTab}></DisplayPage>

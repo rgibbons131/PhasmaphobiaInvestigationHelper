@@ -2,12 +2,22 @@
   display: none;
 }
 
+.contents {
+  display: contents;
+}
+
 .maps {
-  display: flex;
-  flex-direction: row;
+  display: contents;
+  flex-direction: column;
 }
 
 .selector {
+  display: contents;
+}
+
+.selector * {
+  font-size: 20pt;
+  margin-left: 30px;
 }
 
 .image {

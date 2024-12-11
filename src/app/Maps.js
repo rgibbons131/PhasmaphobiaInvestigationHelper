@@ -11,7 +11,7 @@ export default function Maps({ display }) {
   const [map, setMap] = useState("none");
   return (
     <section className={display ? styles.maps : styles.hidden}>
-      <ul classname={styles.selector}>
+      <ul className={styles.selector}>
         <li
           onClick={() => {
             setMap("tanglewood");
