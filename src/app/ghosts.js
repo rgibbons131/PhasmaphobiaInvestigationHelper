@@ -5,175 +5,234 @@ export default function ghosts() {
     {
       name: "Banshee",
       evidence: ["UV", "gorbs", "dots"],
-      strengths: ["Will target only one player at a time."],
-      weaknesses: ["Has a distinctive wail on the Parabolic Microphone."],
+      strengths: [
+        "Focuses on the same player until that player is killed or has left the game",
+      ],
+      weaknesses: [
+        "Cannot kill players other than the target if the target is inside",
+        "Can produce a unique screech on the parabolic microphone",
+        "Performs singing ghost events more often than other ghost types",
+        "Frequently roams to target player outside of hunts",
+      ],
     },
     {
       name: "Demon",
       evidence: ["UV", "ghostWriting", "freeze"],
-      strengths: ["Can initiate hunts more often."],
-      weaknesses: ["Crucifix effectiveness is increased to 5m against one."],
+      strengths: [
+        "Lower hunt cooldown than other ghosts",
+        "Higher hunt sanity threshold",
+        "Smudging prevents hunts for shorter",
+        "Rare chance to hunt at any sanity percentage",
+      ],
+      weaknesses: ["Increased effective crucifix range"],
     },
     {
       name: "Deogen",
       evidence: ["spiritBox", "ghostWriting", "dots"],
       strengths: [
-        "Always knows where the player is during a hunt and moves very fast when going to their location.",
+        "Always knows where the player is during a hunt",
+        "Moves very fast when not near a player",
       ],
-      weaknesses: ["Moves very slowly when it sees its victim."],
+      weaknesses: [
+        "Can produce a unique response through the Spirit Box",
+        "Lower sanity hunt threshold",
+        "Significantly slows when near a player",
+      ],
     },
     {
       name: "Goryo",
       evidence: ["EMF5", "UV", "dots"],
       strengths: [
-        "Can only be seen interacting with D.O.T.S. through a camera when nobody is nearby.",
+        "Can only be seen interacting with D.O.T.S. through a camera when nobody is nearby",
       ],
-      weaknesses: ["Tends to wander away less from its ghost room."],
+      weaknesses: [
+        "Less likely to wander away from favorite room",
+        "Cannot change favorite room",
+      ],
     },
     {
       name: "Hantu",
       evidence: ["UV", "gorbs", "freeze"],
-      strengths: ["Lower temperatures allow the Hantu to move faster."],
-      weaknesses: ["Warmer areas slow the Hantu's movement."],
+      strengths: ["Lower temperatures allow the Hantu to move faster"],
+      weaknesses: [
+        "Warmer areas slow the Hantu's movement",
+        "If the breaker is off, while have visible breath during hunt",
+      ],
     },
     {
       name: "Jinn",
       evidence: ["EMF5", "UV", "freeze"],
-      strengths: ["Travels at faster speeds if its victim is far away."],
-      weaknesses: ["Cannot use its ability if the site's fuse box is off."],
+      strengths: [
+        "Gets a speed boost when chasing a player that is far away",
+        "Occasionally attempts to zap the sanity of nearby players",
+      ],
+      weaknesses: [
+        "Cannot use its ability if the site's fuse box is off",
+        "Cannot turn off the fuse box",
+      ],
     },
     {
       name: "Mare",
       evidence: ["spiritBox", "gorbs", "ghostWriting"],
-      strengths: ["Has an increased chance to attack in the dark."],
+      strengths: [
+        "Hunts at a higher sanity threshold in an unlit room",
+        "Turns off lights and breaks lightbulbs more often",
+        "May turn off a light immediately after a player turns one on",
+      ],
       weaknesses: [
-        "Turning the lights on will reduce the chance of an attack.",
+        "Hunts at a lower sanity threshold in a lit room",
+        "Chooses unlit rooms to remain in more often",
       ],
     },
     {
       name: "Moroi",
       evidence: ["spiritBox", "ghostWriting", "freeze"],
       strengths: [
-        "Moves noticeably faster at low player sanity and can make players lose sanity quicker than usual while investigating.",
+        "Hunting speeds depend directly on average team sanity",
+        "Can curse players through the spirit box or the parabolic microphone, making them lose sanity faster",
       ],
-      weaknesses: ["Smudge sticks blind the ghost for longer during hunts."],
+      weaknesses: ["Smudge sticks blind the ghost for longer during hunts"],
     },
     {
       name: "The Mimic",
       evidence: ["spiritBox", "UV", "gorbs", "freeze"],
-      strengths: ["Can mimic the abilities and traits of other ghosts."],
-      weaknesses: ["Will present Ghost Orbs as a secondary "],
+      strengths: ["Can mimic the abilities and traits of other ghosts"],
+      weaknesses: ["Will always present Ghost Orbs as a fake evidence"],
     },
     {
       name: "Myling",
       evidence: ["EMF5", "UV", "ghostWriting"],
-      strengths: ["Has quieter footsteps during a hunt."],
-      weaknesses: ["Produces paranormal sounds more frequently."],
+      strengths: ["Has quieter footsteps and vocalizations during hunts"],
+      weaknesses: [
+        "Produces paranormal sounds (parabolic mic) more frequently",
+      ],
     },
     {
       name: "Obake",
       evidence: ["EMF5", "UV", "gorbs"],
-      strengths: ["May leave fingerprints that disappear quicker."],
-      weaknesses: ["Has a small chance of leaving six-fingered handprints."],
+      strengths: [
+        "Fingerprints can disappear faster than usual",
+        "Occasionally fails to leave fingerprints",
+      ],
+      weaknesses: [
+        "Has a chance to blink in a different ghost model when hunting",
+        "Can leave a unique 6 finger pattern",
+      ],
     },
     {
       name: "Oni",
       evidence: ["EMF5", "freeze", "dots"],
-      strengths: ["Increased activity and ghost events."],
-      weaknesses: ["An Oni's increased activity makes them easier to find."],
+      strengths: ["More active when people are nearby"],
+      weaknesses: [
+        'Cannot produce "airball" ghost events',
+        "Model remains visible for longer periods when hunting",
+      ],
     },
     {
       name: "Onryo",
       evidence: ["spiritBox", "gorbs", "freeze"],
-      strengths: ["A flame extinguishing can cause an Onryo to attack."],
+      strengths: ["Every third flame extinguish, the onryo tries to hunt"],
       weaknesses: [
-        "The presence of flames reduces the Onryo's ability to attack.",
+        "Presence of flames prevents the ghost from hunting, which blows out the flame",
       ],
     },
     {
       name: "Phantom",
       evidence: ["spiritBox", "UV", "dots"],
       strengths: [
-        "Looking at a Phantom will lower the player's sanity considerably.",
+        "Seeing the ghost nearby during manifestations and hunts drains more sanity",
+        "Remains invisible for longer periods when hunting",
+        "Occasionally roams to a random player",
       ],
       weaknesses: [
-        "Taking a photo of the Phantom will cause it to briefly disappear.",
+        "Taking a photo of the Phantom will cause it to briefly disappear",
       ],
     },
     {
       name: "Poltergeist",
       evidence: ["spiritBox", "UV", "ghostWriting"],
-      strengths: ["Capable of throwing multiple objects at once."],
-      weaknesses: ["Becomes powerless with no throwables nearby."],
+      strengths: [
+        "Capable of throwing multiple objects at once",
+        "Can throw a single object farther than other types",
+      ],
+      weaknesses: [""],
     },
     {
       name: "Raiju",
       evidence: ["EMF5", "gorbs", "dots"],
-      strengths: ["Moves faster near electrical devices."],
+      strengths: ["Moves faster near electrical devices"],
       weaknesses: [
-        "Disrupts electronic equipment from further away when it hunts.",
+        "Disrupts electronic equipment from further away when it hunts",
       ],
     },
     {
       name: "Revenant",
       evidence: ["gorbs", "ghostWriting", "freeze"],
       strengths: [
-        "Can travel significantly faster if a player is spotted during a hunt.",
+        "Significant speed increase when chasing a player during hunts",
       ],
-      weaknesses: ["Moves very slowly when not chasing a player."],
+      weaknesses: ["Moves very slowly when not chasing a player"],
     },
     {
       name: "Shade",
       evidence: ["EMF5", "ghostWriting", "freeze"],
-      strengths: ["Being shy makes it more difficult to locate and obtain "],
-      weaknesses: ["Less likely to hunt if multiple people are nearby."],
+      strengths: ["Harder to find"],
+      weaknesses: [
+        "Has a low hunt sanity threshold",
+        "will not perform an action that produces emf lv3 while in the same room as a player",
+        "cannot hunt, interact, or event while in the same room as a player",
+      ],
     },
     {
       name: "Spirit",
       evidence: ["EMF5", "spiritBox", "ghostWriting"],
-      strengths: ["None."],
-      weaknesses: [
-        "Smudge sticks are more effective, preventing a hunt for longer.",
-      ],
+      strengths: ["None"],
+      weaknesses: ["Incense prevents hunts for longer (double duration)"],
     },
     {
       name: "The Twins",
       evidence: ["EMF5", "spiritBox", "freeze"],
-      strengths: ["Either Twin may start a hunt, though not at the same time."],
+      strengths: [
+        "Either Twin may start a hunt, though not both at the same time",
+        "One twin is faster than normal",
+      ],
       weaknesses: [
-        "Will often interact with the environment at the same time.",
+        "Can interact with the environment simultaneously",
+        "One twin is slower than normal",
       ],
     },
     {
       name: "Wraith",
       evidence: ["EMF5", "spiritBox", "dots"],
-      strengths: ["Does not leave UV footprints after stepping in salt."],
-      weaknesses: ["Will become more active if it steps in salt."],
+      strengths: [
+        "Can teleport to a random player, becoming active near them, outside of ghost events and hunt",
+      ],
+      weaknesses: ["Never disturbs salt"],
     },
     {
       name: "Yokai",
       evidence: ["spiritBox", "gorbs", "dots"],
       strengths: [
-        "Talking near the Yokai will anger it, increasing the chance to attack.",
+        "Talking near it will temporarily increase the hunting threshold and interaction rate",
       ],
-      weaknesses: ["Can only hear voices close to it during a hunt."],
+      weaknesses: [
+        "When hunting, it can only hear voices and detect electronics within a short range",
+      ],
     },
     {
       name: "Yurei",
       evidence: ["gorbs", "freeze", "dots"],
-      strengths: ["Has a stronger effect on sanity."],
-      weaknesses: [
-        "Smudging the Yurei's ghost room will reduce how often it wanders.",
-      ],
+      strengths: ["May randomly shut a door and deduct nearby players' sanity"],
+      weaknesses: ["Will be temporarily confined to its room after smudging"],
     },
     {
       name: "Thaye",
       evidence: ["gorbs", "ghostWriting", "dots"],
 
-      strengths: [
-        "Entering the location makes it active, defensive and agile.",
+      strengths: ["Becomes very active the first time a player gets nearby"],
+      weaknesses: [
+        "Becomes slower and less active the longer players are near it",
       ],
-      weaknesses: ["Becomes slower and less active over time."],
     },
   ];
 }
