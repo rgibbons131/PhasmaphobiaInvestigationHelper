@@ -1,8 +1,15 @@
 import styles from "./ghost.module.css";
+import React, { use } from "react";
+import { useState } from "react";
 
 export default function Ghost({ ghost, evidences }) {
+  console.log(ghost.name);
   let className = styles.ghostCard;
   let evidence = [];
+  const [evidenceOn, setEvidenceOn] = useState(false);
+  function toggleEvidence() {
+    setEvidenceOn(!evidenceOn);
+  }
   for (let i = 0; i < ghost.evidence.length; i++) {
     evidence.push(
       <li key={i + "e" + ghost.name} className="evidence">
@@ -11,6 +18,10 @@ export default function Ghost({ ghost, evidences }) {
     );
   }
   let strengths = [];
+  const [strengthsOn, setStrengthsOn] = useState(false);
+  function toggleStrengths() {
+    setStrengthsOn(!strengthsOn);
+  }
   for (let i = 0; i < ghost.strengths.length; i++) {
     strengths.push(
       <li key={i + "s" + ghost.name} className="strength">
@@ -26,6 +37,10 @@ export default function Ghost({ ghost, evidences }) {
     }
   }
   let weaknesses = [];
+  const [weaknessesOn, setWeaknessesOn] = useState(false);
+  function toggleWeaknesses() {
+    setWeaknessesOn(!weaknessesOn);
+  }
   for (let i = 0; i < ghost.weaknesses.length; i++) {
     weaknesses.push(
       <li key={i + "w" + ghost.name} className="weekness">
@@ -36,12 +51,27 @@ export default function Ghost({ ghost, evidences }) {
   return (
     <li className={className}>
       <div className={styles.ghostName}>{ghost.name}</div>
-      <p>Evidences</p>
-      <ul className={styles.evidences}>{evidence}</ul>
-      <p>Strengths</p>
-      <ul className={styles.strengths}>{strengths}</ul>
-      <p>Weaknesses</p>
-      <ul className={styles.weaknesses}>{weaknesses}</ul>
+      <p onClick={toggleEvidence}>Evidences</p>
+      <ul
+        className={evidenceOn ? styles.evidence : styles.hidden}
+        //className={styles.evidence}
+      >
+        {evidence}
+      </ul>
+      <p onClick={toggleStrengths}>Strengths</p>
+      <ul
+        className={strengthsOn ? styles.strengths : styles.hidden}
+        //className={styles.strengths}
+      >
+        {strengths}
+      </ul>
+      <p onClick={toggleWeaknesses}>Weaknesses</p>
+      <ul
+        className={weaknessesOn ? styles.weaknesses : styles.hidden}
+        //className={styles.weaknesses}
+      >
+        {weaknesses}
+      </ul>
     </li>
   );
 }
