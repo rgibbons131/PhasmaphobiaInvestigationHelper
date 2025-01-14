@@ -51,21 +51,36 @@ export default function Ghost({ ghost, evidences }) {
   return (
     <li className={className}>
       <div className={styles.ghostName}>{ghost.name}</div>
-      <p onClick={toggleEvidence}>Evidences</p>
+      <p
+        className={evidenceOn ? styles.ghostHeaderOn : styles.ghostHeaderOff}
+        onClick={toggleEvidence}
+      >
+        Evidences
+      </p>
       <ul
         className={evidenceOn ? styles.evidence : styles.hidden}
         //className={styles.evidence}
       >
         {evidence}
       </ul>
-      <p onClick={toggleStrengths}>Strengths</p>
+      <p
+        className={strengthsOn ? styles.ghostHeaderOn : styles.ghostHeaderOff}
+        onClick={toggleStrengths}
+      >
+        Strengths
+      </p>
       <ul
         className={strengthsOn ? styles.strengths : styles.hidden}
         //className={styles.strengths}
       >
         {strengths}
       </ul>
-      <p onClick={toggleWeaknesses}>Weaknesses</p>
+      <p
+        className={weaknessesOn ? styles.ghostHeaderOn : styles.ghostHeaderOff}
+        onClick={toggleWeaknesses}
+      >
+        Weaknesses
+      </p>
       <ul
         className={weaknessesOn ? styles.weaknesses : styles.hidden}
         //className={styles.weaknesses}

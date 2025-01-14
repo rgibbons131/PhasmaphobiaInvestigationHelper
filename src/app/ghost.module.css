@@ -15,8 +15,18 @@
   margin: 15px 0;
 }
 
-/* .evidences li::marker {
-} */
+.ghostHeaderOff {
+  padding-bottom: 5px;
+}
+
+.ghostHeaderOff::before {
+  content: "\2610 ";
+  padding-bottom: 5px;
+}
+
+.ghostHeaderOn::before {
+  content: "\2611 ";
+}
 
 .strengths li::marker {
   content: "\2022    ";
@@ -27,7 +37,8 @@
 }
 
 .ghostName {
-  font-size: 1.6em;
+  font-size: 1.75em;
+  padding-bottom: 5px;
 }
 
 .hidden {
