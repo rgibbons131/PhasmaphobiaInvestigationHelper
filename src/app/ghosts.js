@@ -16,6 +16,14 @@ export default function ghosts() {
       ],
     },
     {
+      name: "Dayan",
+      evidence: ["EMF5", "gorbs", "spiritBox"],
+      strengths: [
+        "Moves faster when a player moves near the Dayan when a hunt begins",
+      ],
+      weaknesses: ["Moves slower when a player stands still near the Dayan", "Can only be female"],
+    },
+    {
       name: "Demon",
       evidence: ["UV", "ghostWriting", "freeze"],
       strengths: [
@@ -37,6 +45,16 @@ export default function ghosts() {
         "Can produce a unique response through the Spirit Box",
         "Lower sanity hunt threshold",
         "Significantly slows when near a player",
+      ],
+    },
+    {
+      name: "Gallu",
+      evidence: ["EMF5", "UV", "spiritBox"],
+      strengths: [
+        "Certain actions will enrage the Gallu, causing it to have a higher hunt sanity threshold, increased hunt speed, and shorter blind time",
+      ],
+      weaknesses: [
+        "After a hunt, the Gallu will become weakened with a lower sanity threshold, decreased hunt speed, and longer blind time",
       ],
     },
     {
@@ -117,6 +135,17 @@ export default function ghosts() {
       weaknesses: [
         "Has a chance to blink in a different ghost model when hunting",
         "Can leave a unique 6 finger pattern",
+      ],
+    },
+    {
+      name: "Obambo",
+      evidence: ["ghostWriting", "UV", "dots"],
+      strengths: [
+        "Obambo has a calm and an aggressive state",
+        "In aggressive state, the obambo is more active and has a 65% sanity threshold",
+      ],
+      weaknesses: [
+        "In calm state, the obambo is less active and has a 10% sanity threshold"
       ],
     },
     {
